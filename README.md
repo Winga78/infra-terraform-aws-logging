@@ -14,3 +14,18 @@ L’objectif est de centraliser les logs d’API, les événements d’AWS, afin
 ── variables.tf # variables Terraform
 ── outputs.tf # outputs (ARNs, noms, etc.)
 ── modules/ # éventuels modules réutilisables ou découplés
+
+
+
+## Pré-requis  
+- Terraform (version compatible avec le provider AWS utilisé)  
+- Compte AWS avec droits suffisants pour créer CloudTrail, CloudWatch, S3, IAM selon la configuration  
+- Variables AWS configurées (via `aws credentials`, `environment variables`, ou `provider` Terraform)  
+
+## Déploiement / Utilisation  
+
+```bash
+terraform init
+terraform plan
+terraform apply
+
